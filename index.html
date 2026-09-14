@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <div class="game-wrap">
+      <header class="topbar">
+        <div class="brand">SNAKE GAME</div>
+        <div class="stats">
+          <span>Score: <b id="score">0</b></span>
+          <span>Best: <b id="best">0</b></span>
+        </div>
+      </header>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="1000" height="600"></canvas>
+
+        <section id="startScreen" class="overlay">
+          <div class="panel">
+            <h1>🐍 SNAKE GAME</h1>
+            <p>Arrow Keys / WASD or swipe on mobile</p>
+            <button id="playBtn">PLAY</button>
+          </div>
+        </section>
+
+        <section id="gameOverScreen" class="overlay hidden">
+          <div class="panel">
+            <h1>GAME OVER</h1>
+            <p>Your Score: <b id="finalScore">0</b></p>
+            <button id="againBtn">PLAY AGAIN</button>
+          </div>
+        </section>
+      </div>
+
+      <p class="hint">Swipe on mobile • Arrow Keys / WASD on PC</p>
+    </div>
+  </main>
+
+  <!-- Local audio files: generated for this game -->
+  <audio id="explosionSound" src="./explosion.mp3" preload="auto"></audio>
+  <audio id="backgroundMusic" src="./background.wav" loop preload="auto"></audio>
+  <audio id="eatSound" src="./eat.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

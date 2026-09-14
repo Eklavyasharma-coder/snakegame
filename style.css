@@ -1,0 +1,135 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #08030f;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page {
+  width: 100%;
+  padding: 18px;
+}
+
+.game-wrap {
+  width: min(1000px, 100%);
+  margin: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 13px 18px;
+  border-radius: 14px 14px 0 0;
+  background: linear-gradient(90deg, #16052a, #29054a);
+  border: 1px solid #7f35c8;
+}
+
+.brand {
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #d79aff;
+  text-shadow: 0 0 12px #8d2cff;
+}
+
+.stats {
+  display: flex;
+  gap: 22px;
+  font-size: 16px;
+}
+
+.stats b {
+  color: #e0a8ff;
+}
+
+.canvas-wrap {
+  position: relative;
+  width: 100%;
+  border: 1px solid #7f35c8;
+  border-top: 0;
+  background: #12051d;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  background: #17250d;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(4, 0, 9, 0.62);
+  backdrop-filter: blur(3px);
+}
+
+.hidden { display: none !important; }
+
+.panel {
+  text-align: center;
+  padding: 30px 34px;
+  border-radius: 20px;
+  background: rgba(19, 5, 31, 0.95);
+  border: 1px solid #a348ff;
+  box-shadow: 0 0 35px rgba(163, 72, 255, 0.3);
+}
+
+.panel h1 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 5vw, 50px);
+  letter-spacing: 2px;
+}
+
+.panel p {
+  margin: 0 0 20px;
+  color: #d8c5e7;
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 13px 30px;
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+  background: linear-gradient(135deg, #7d1fd1, #c04cff);
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(178, 58, 255, 0.45);
+}
+
+button:active { transform: scale(0.97); }
+
+.hint {
+  text-align: center;
+  margin: 10px 0 0;
+  color: #a996b8;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 8px; }
+  .topbar { padding: 10px 12px; }
+  .brand { font-size: 14px; }
+  .stats { gap: 10px; font-size: 13px; }
+  .panel { padding: 24px 20px; }
+}
